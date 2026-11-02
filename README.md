@@ -11,15 +11,15 @@ This folder is a standalone static site. It needs no npm packages, build command
 
 GitHub's branch publishing selector supports the repository root or `/docs`; it cannot select an arbitrary `/github-pages` folder in the Flutter repository. Copying this folder's contents to a dedicated repository root is the simplest deployment. If publishing from this repository instead, use a Pages Actions workflow that uploads this folder, or put the site's files under `/docs`.
 
-The deployed URLs will have this shape (replace the example account and repository with your own):
+The published site uses these URLs:
 
-- Home: `https://YOUR_ACCOUNT.github.io/YOUR_REPOSITORY/`
-- Privacy: `https://YOUR_ACCOUNT.github.io/YOUR_REPOSITORY/privacy-policy.html`
-- Terms: `https://YOUR_ACCOUNT.github.io/YOUR_REPOSITORY/terms-of-use.html`
+- [Home](https://firebirdappsdev.github.io/formsApp/)
+- [Privacy policy](https://firebirdappsdev.github.io/formsApp/privacy-policy.html)
+- [Terms of use](https://firebirdappsdev.github.io/formsApp/terms-of-use.html)
 
 ## Configure the app after publishing
 
-Set `PRIVACY_POLICY_URL` and `TERMS_URL` in the Flutter app's local `config/app_config.json` (using `config/app_config.example.json` as a template) to the real, publicly accessible HTTPS URLs. Keep `SUPPORT_EMAIL` set to `firebirdapps.dev@gmail.com`. Run these commands from the Flutter app repository to rebuild:
+`PRIVACY_POLICY_URL` and `TERMS_URL` are configured with these published URLs in the app's Dart defaults, sample configuration, and local `config/app_config.json`. `SUPPORT_EMAIL` is `firebirdapps.dev@gmail.com`. If moving the site, update the URLs in the app configuration and rebuild. Run these commands from the Flutter app repository:
 
 ```powershell
 flutter build apk --debug --dart-define-from-file=config/app_config.json
@@ -35,10 +35,11 @@ These are build-time values; changing the JSON does not update an already-instal
 - [Privacy policy](privacy-policy.html)
 - [Terms of use](terms-of-use.html)
 - [Shared responsive styles](styles.css)
+- [App icon assets](assets/): the header uses the same icon as the Android app, with 32px favicon and 180px Apple touch icon variants. Include this directory when copying or deploying the site. If the app icon changes, update the source copy and resized variants here.
 
 The documents describe the current Android implementation: Google Forms/Drive access, response reading, device-based notifications, local preferences, exports, Firebase Analytics without advertising ID collection, and voluntarily submitted anonymous Firebase feedback. They do not claim a crash-reporting service, app-level analytics opt-out, or automatic feedback deletion.
 
-Before publishing, confirm the effective date, Firebirdapps contact identity, and that your Firebase Analytics retention settings and actual support/feedback retention practices match the policy. Update the documents when features, providers, data use, or retention practices change. All three public pages contain the configured support email. There are no owner-value placeholders in the public pages; only the two app URL values remain to be filled after hosting.
+Before publishing, confirm the effective date, Firebirdapps contact identity, and that your Firebase Analytics retention settings and actual support/feedback retention practices match the policy. Update the documents when features, providers, data use, or retention practices change. All three public pages contain the configured support email. There are no owner-value placeholders in the public pages or the app's policy URL configuration. Android release-signing values remain separate; see [remaining configuration](../docs/PLACEHOLDERS.md).
 
 ## Implementation review: 2 November 2026
 
