@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Forms App handles Google account and Forms data, local storage, Firebase Analytics, and voluntary feedback.">
+  <title>Privacy policy · Forms App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true">▤</span>Forms App</a>
+    <nav aria-label="Main navigation"><a href="privacy-policy.html" aria-current="page">Privacy policy</a><a href="terms-of-use.html">Terms of use</a></nav>
+  </header>
+  <main id="main">
+    <h1>Privacy policy</h1>
+    <p class="meta">Effective and last updated: 2 November 2026</p>
+    <p>Firebirdapps ("we", "us") provides Forms App, an independent Android application with package identifier <strong>com.firebirdapps.forms_app</strong>. This policy explains how information is handled when you use the app, contact us, or visit this site.</p>
+    <div class="summary">Your live forms and responses are managed through Google's services. We do not operate a separate server that stores your Google Forms or answers. Firebase receives usage analytics, plus feedback messages only when you explicitly submit them.</div>
+
+    <h2>1. Google sign-in and permissions</h2>
+    <p>Forms App uses Google's sign-in and OAuth authorization flow. Your Google password is entered through Google, not collected by Forms App. The app accesses your account name, email address, account identifier, and authorization credentials to show the connected account and make authorized API requests.</p>
+    <p>The current app requests the following permissions:</p>
+    <ul>
+      <li><strong>Google Forms management (forms.body):</strong> read, create, and edit forms, questions, settings, and publication state.</li>
+      <li><strong>Google Forms response reading (forms.responses.readonly):</strong> display response answers, summaries, and available respondent information, and check for new responses.</li>
+      <li><strong>Google Drive access (drive):</strong> find existing forms in your account and manage their files, including copying, renaming, and moving forms to trash. This is a broad Drive permission; the app's workflows use it to manage Google Forms files.</li>
+    </ul>
+    <p>We use Google user data only to provide the form-management features you use. We do not sell it, use it for advertising, send it to Firebase Analytics, or use it to train artificial intelligence models. Forms App's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. We do not give humans access to your Google API data except with your affirmative consent for specific support, where necessary for security or legal obligations, or as otherwise permitted by that policy.</p>
+
+    <h2>2. Forms, answers, and exports</h2>
+    <p>Form titles, descriptions, questions, settings, identifiers, and responses are requested directly from Google and used on your device to show and edit your workspace. Responses may include personal information or respondent email addresses when your form collects them. Changes you save are sent to Google; creating, copying, publishing, or trashing a form changes your Google account data.</p>
+    <p>Form images shown in preview are loaded from the image address included in the form. The image host receives connection information such as your IP address and the requested image address. Opening a live form, Google's editor, or a YouTube video sends you to the relevant external app or browser, where that provider's privacy practices apply.</p>
+    <p>When you export, print, or share content, the app prepares the requested files or links and passes them to the destination you choose. That destination may receive form information, answers, or respondent details. You control the recipients, storage location, and sharing permissions. Saved or shared copies are not removed by signing out of Forms App.</p>
+    <p>Copying a form link places it on your device's clipboard. Your operating system and apps that are permitted to read the clipboard may have access to that link.</p>
+
+    <h2>3. Information stored on your device</h2>
+    <p>The app stores preferences such as interface language, appearance, layout, favorite form identifiers, demo workspace data, and rating-reminder choices. Favorites are associated locally with the relevant Google account identifier. Rating reminders also store first-use and reminder dates, successful form-task counts, and identifiers of forms with completed tasks for the current recorded day. The app uses these reminder records locally and does not send them to the feedback database or Firebase Analytics. Live workspace data, unsaved edits, and preview answers are held in app memory while you use them; the app does not maintain a separate cloud archive of your forms or an automatic backup of unsaved edits.</p>
+    <p>Sharing or printing may create temporary files containing form information or responses in app caches or the Android print system. Signing out does not clear these temporary files. They may remain until the app, Android, or the relevant print/share service clears them; files you save or send elsewhere remain under that destination's control.</p>
+    <p>Response notifications store the connected account identifier and email, form and response identifiers, timestamps, unread counts, and scheduling information on your device. Background response checks request response identifiers and timestamps, rather than respondent answers. These support checks against Google and prevent duplicate alerts. Notification titles contain the form's title; titles and counts may be visible on your lock screen depending on Android settings. With Android notification permission and valid Google authorization, monitoring is enabled for a newly connected account by default unless you disable it. Background checks are scheduled about every 15 minutes and can be delayed by Android. You can disable them in the app or Android settings. Signing out cancels monitoring and clears the active notification account and response checkpoints. Per-account notification choices and favorites remain locally until you clear app data or uninstall, subject to backup restoration.</p>
+    <p>Forms App does not write OAuth access tokens to its own persistent storage. Google's sign-in components handle account sessions and authorization using their own mechanisms. Android may back up ordinary app preferences according to your device settings; notification account storage and its response database are excluded from app backup.</p>
+
+    <h2>4. Firebase Analytics</h2>
+    <p>The app uses Google Analytics for Firebase to understand usage and improve reliability and usability. Collection starts when the app initializes, including before you sign in to Google. It records app opens and standard SDK events such as first opens, sessions, and engagement. The SDK processes an app-instance identifier, app version, device and operating-system details, language, event times, and usage information. Google may derive approximate geographic information from network connections.</p>
+    <p>The Android app disables advertising ID collection and advertising personalization signals. We do not send your Google account email, form contents, respondent answers, or OAuth tokens as analytics event data. The current app has no analytics opt-out setting; collection is enabled while the app runs. Google processes analytics according to its service settings and <a href="https://policies.google.com/privacy">Privacy Policy</a>. See also <a href="https://firebase.google.com/support/privacy">Firebase's privacy information</a>.</p>
+
+    <h2>5. Ratings, feedback, and support</h2>
+    <p>The app may show a rating reminder after successful form-management tasks. Automatic reminders offer <strong>Remind me later</strong> and <strong>Never ask again</strong>; those choices are stored locally. You can still open <strong>Rate Forms App</strong> manually.</p>
+    <p>Selecting four or five stars opens the app's Google Play listing. Google handles any review you choose to post under its own terms; we cannot determine whether you posted a review. Selecting one to three stars displays a feedback field. Selecting stars alone does not create a feedback database record. Only pressing <strong>Submit feedback</strong> sends that feedback to us.</p>
+    <p>Submitted feedback is stored in our Firebase Realtime Database and includes your star rating, message, a randomly generated submission identifier, server timestamp, payload schema version, app name and package identifier, app version/build, platform, and submission source. No Firebase sign-in is required. The app does not attach your Google account identifier, email, form contents, answers, or authorization tokens. A message may nevertheless identify you if you include personal information. Feedback is accessible to authorized project administrators; public reads are disabled.</p>
+    <p>Help &amp; feedback opens your email application with our address filled in. Nothing is emailed until you choose to send it. If you contact us, we receive the sender address, message, and any attachments you provide through our email provider. Please avoid sending sensitive form data, passwords, or access tokens.</p>
+
+    <h2>6. Sharing, providers, and security</h2>
+    <p>Google provides sign-in, Forms, Drive, YouTube, Firebase hosting of feedback, and analytics services. Image hosts, your email provider, print services, and any export/share destination you choose also process the information sent to them. Providers receive technical connection information, such as IP addresses, needed to handle requests under their own privacy practices. We do not sell personal information. We may disclose information we hold where required by law or necessary to protect users and the service.</p>
+    <p>Requests to Google APIs and Firebase use encrypted HTTPS connections. We limit public access to submitted feedback through database rules. No storage or transmission method is completely secure. Google and other providers may process information in countries outside your own under their applicable safeguards and policies.</p>
+
+    <h2>7. Retention, deletion, and your choices</h2>
+    <p>Your live forms and responses remain in Google until you manage or delete them there. Moving a form to trash in this app uses Google Drive's trash process rather than immediately erasing all copies. Local preferences remain until you clear app data or uninstall, subject to Android backup restoration. Exported files remain where you saved or shared them.</p>
+    <p>Submitted feedback and support messages are retained while needed to investigate requests, improve the app, or meet legal requirements. The app does not automatically expire feedback records. Analytics retention is controlled by the project's Google Analytics settings and Google's service policies.</p>
+    <p>You can sign out, use <strong>Disconnect Google account</strong> to revoke the app's authorization, or remove access through <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revoking access does not delete your Google forms. You can also disable response notifications, decline to submit feedback, and clear app data.</p>
+    <p>For access, correction, or deletion requests concerning information we hold, email <a href="mailto:firebirdapps.dev@gmail.com?subject=Forms%20App%20privacy%20request">firebirdapps.dev@gmail.com</a>. For anonymous feedback, provide the approximate submission date and enough message context to locate it without sending additional sensitive information. We may need information to verify a request; anonymous analytics or submissions may not be identifiable from an email address alone. Applicable privacy rights depend on where you live.</p>
+
+    <h2>8. Children and respondent responsibilities</h2>
+    <p>Forms App is not directed to children under 13 or below the minimum age required in their country. We do not knowingly collect personal information from children through support or feedback. Contact us if you believe such information was submitted. Form owners are responsible for obtaining appropriate consent and protecting respondent information, including information about children.</p>
+
+    <h2>9. This website and policy updates</h2>
+    <p>This policy site contains no analytics scripts, cookies set by our pages, or submission forms. GitHub Pages hosts it and may process technical connection information such as IP addresses and request logs under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. External links are governed by their providers' policies.</p>
+    <p>We may update this policy as the app or our practices change. The updated policy will be posted here with a revised date; where required, we will provide additional notice.</p>
+    <p>Privacy contact: <strong>Firebirdapps</strong>, <a href="mailto:firebirdapps.dev@gmail.com">firebirdapps.dev@gmail.com</a>.</p>
+  </main>
+  <footer>Forms App · Firebirdapps · <a href="terms-of-use.html">Terms of use</a></footer>
+</body>
+</html>
