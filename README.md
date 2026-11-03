@@ -11,12 +11,13 @@ This folder is a standalone static site. It needs no npm packages, build command
 
 GitHub's branch publishing selector supports the repository root or `/docs`; it cannot select an arbitrary `/github-pages` folder in the Flutter repository. Copying this folder's contents to a dedicated repository root is the simplest deployment. If publishing from this repository instead, use a Pages Actions workflow that uploads this folder, or put the site's files under `/docs`.
 
-The published site uses these URLs:
+The published site uses the custom domain `firebirdapps.com` with these URLs:
 
-- [Home](https://firebirdappsdev.github.io/formsApp/)
-- [Privacy policy](https://firebirdappsdev.github.io/formsApp/privacy-policy.html)
-- [Terms of use](https://firebirdappsdev.github.io/formsApp/terms-of-use.html)
-- [Data deletion requests](https://firebirdappsdev.github.io/formsApp/data-deletion.html) — publish this new page before entering its URL in Play Console's **Delete data URL** field.
+- [Home](https://firebirdapps.com/formsApp/)
+- [Privacy policy](https://firebirdapps.com/formsApp/privacy-policy.html)
+- [Terms of use](https://firebirdapps.com/formsApp/terms-of-use.html)
+
+The owner has opted out of Play Console's optional data-deletion URL field. Privacy requests use the email contact described in the privacy policy.
 
 ## Configure the app after publishing
 
@@ -35,19 +36,12 @@ These are build-time values; changing the JSON does not update an already-instal
 - [Home and support](index.html)
 - [Privacy policy](privacy-policy.html)
 - [Terms of use](terms-of-use.html)
-- [Data deletion request steps and retention](data-deletion.html)
 - [Shared responsive styles](styles.css)
 - [App icon assets](assets/): the header uses the same icon as the Android app, with 32px favicon and 180px Apple touch icon variants. Include this directory when copying or deploying the site. If the app icon changes, update the source copy and resized variants here.
 
 The documents describe the current Android implementation: Google Forms/Drive access, response reading, device-based notifications, local preferences, exports, Firebase Analytics without advertising ID collection, and voluntarily submitted anonymous Firebase feedback. They do not claim a crash-reporting service, app-level analytics opt-out, or automatic feedback deletion.
 
-Before publishing, confirm the effective date, Firebirdapps contact identity, and that your Firebase Analytics retention settings and actual support/feedback retention practices match the policy. Update the documents when features, providers, data use, or retention practices change. All four public pages contain the configured support email. There are no owner-value placeholders in the public pages or the app's policy URL configuration. Android release-signing values remain separate; see [remaining configuration](../docs/PLACEHOLDERS.md).
-
-## Data deletion requests: 3 November 2026
-
-The dedicated deletion page provides an English email request process, identifies Forms App and Firebirdapps, and describes feedback/support deletion, manual processing, exceptions, Analytics limitations, Google-owned data, local storage, and shared copies. It uses the existing support mailbox and needs no app rebuild or database rule changes.
-
-The developer must monitor the mailbox, verify and locate requests, manually remove matching feedback records and support conversations as applicable, and confirm the outcome. Publishing the page does not add automatic deletion. Do not select the 90-day automatic-deletion option in Play Console. No unverified processing deadline or Analytics retention setting is invented by the page; confirm actual console retention and operational practices before deployment and keep the disclosures current.
+Before publishing, confirm the effective date, Firebirdapps contact identity, and that your Firebase Analytics retention settings and actual support/feedback retention practices match the policy. Update the documents when features, providers, data use, or retention practices change. All three public pages contain the configured support email. There are no owner-value placeholders in the public pages or the app's policy URL configuration. Android release-signing values remain separate; see [remaining configuration](../docs/PLACEHOLDERS.md).
 
 ## Implementation review: 2 November 2026
 
